@@ -1,6 +1,8 @@
 
 package tictactoe;
 
+import java.util.Scanner;
+
 /**
  *
  * @author sandhu
@@ -8,20 +10,41 @@ package tictactoe;
 public class Tictactoe {
     
     private char[][] board;
-    private char currentPmark;
+    private  String currentPmark;
+    private  String currentAimark;
 
-    public char getCurrentPmark() {
+    public String getCurrentAimark() {
+        return currentAimark;
+    }
+
+    public void setCurrentPmark(String currentPmark) {
+        this.currentPmark = currentPmark;
+    }
+
+    public void setCurrentAimark(String currentAimark) {
+        this.currentAimark = currentAimark;
+    }
+ 
+    public String getCurrentPmark() {
         return currentPmark;
     }
     
     
- public Tictactoe(){
- board= new char[3][3];
- intializeGameMark();
- intializeBoard();
- }
+    public Tictactoe()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter your symbol");
+        this.currentPmark = (input.next());
+        System.out.print("enter AI's symbol");
+        this.currentAimark = (input.next());
+        board = new char[3][3];
+        intializeGameMark(currentPmark, currentAimark);
+        intializeBoard();
+    }
+    
 
-    private void intializeGameMark() {
+
+    private void intializeGameMark(String currentPmark,String currentAimark) {
        
     
     }
