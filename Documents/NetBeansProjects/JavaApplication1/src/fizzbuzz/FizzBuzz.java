@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class FizzBuzz {
 
-    static int[] start_End_Value() {
+    static int[] start_End_Value() {    // method to get values start and end into arrays
 
         int final_Info[] = new int[2];
         Scanner get_Value = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class FizzBuzz {
 
     }
 
-    static boolean check_Values(int v1, int v2) {
+    static boolean check_Values(int v1, int v2) {  // method to check if values are ok to be used
         boolean result = false;
         if (v1 >= 0 && v2 != 0 && v1 < v2) {
             result = true;
@@ -37,7 +37,7 @@ public class FizzBuzz {
         return result;
     }
 
-    private static void fizzBuzz(int i) {
+    private static void fizzBuzz(int i) {     // method to figure out which values qualifies for fizzbuzz 
         if (i % 15 == 0) {
             System.out.println("FizzBuzz");
         } else if (i % 5 == 0) {
@@ -49,7 +49,7 @@ public class FizzBuzz {
         }
     }
 
-    public static void main(String[] as) {
+    public static void main(String[] as) {                // main method to start and intiate program
         System.out.println("welcome to fizzbuzz");
         int values[] = start_End_Value();
 
