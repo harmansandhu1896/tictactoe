@@ -16,7 +16,7 @@ public class FizzBuzz {
 
     static int[] start_End_Value() {
 
-        int final_Info[] = new int[1];
+        int final_Info[] = new int[2];
         Scanner get_Value = new Scanner(System.in);
 
         System.out.println("enter start value");
@@ -37,7 +37,7 @@ public class FizzBuzz {
         return result;
     }
 
-     private static void fizzBuzz(int i) {
+    private static void fizzBuzz(int i) {
         if (i % 15 == 0) {
             System.out.println("FizzBuzz");
         } else if (i % 5 == 0) {
@@ -48,13 +48,17 @@ public class FizzBuzz {
             System.out.println(i);
         }
     }
-        public static void main(String[] as) {
+
+    public static void main(String[] as) {
+        System.out.println("welcome to fizzbuzz");
         int values[] = start_End_Value();
 
         if (check_Values(values[0], values[1]) != false) {
             for (int i = values[0]; i < values[1]; i++) {
                 fizzBuzz(i);
             }
+        } else {
+            System.out.println("something went wrong with values try again");
 
         }
 
