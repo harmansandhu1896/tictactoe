@@ -19,15 +19,41 @@ public class Sorting {
         System.out.println("enter how many values");
         int max_values = get_Value.nextInt();
 
-        int final_Info[] = new int[max_values];
-         System.out.println("enter value");
+        int unsortedArray[] = new int[max_values];
+        System.out.println("enter value");
         for (int i = 0; i < max_values; i++) {
-           
-            final_Info[i] = get_Value.nextInt();
+
+            unsortedArray[i] = get_Value.nextInt();
             System.out.print(", ");
         }
 
-        return final_Info;
+        return unsortedArray;
 
     }
+
+    static int[] bubble_Sort(int[] sortedarray) {
+
+        int temp;
+        for (int i = 0; i < sortedarray.length; i++) {
+            for (int j = 1; j < (sortedarray.length - i); j++) {
+                if (sortedarray[j - 1] > sortedarray[j]) {
+                    temp = sortedarray[j - 1];
+                    sortedarray[j - 1] = sortedarray[j];
+                    sortedarray[j] = temp;
+                }
+
+            }
+
+        }
+        return sortedarray;
+    }
+
+    public static void main(String[] as){
+    
+    
+    
+    
+    }
+    
+    
 }
