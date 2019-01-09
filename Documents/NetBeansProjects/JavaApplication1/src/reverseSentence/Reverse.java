@@ -38,11 +38,18 @@ public class Reverse {
         }
         return str;
     }
-    
-    
-    public static void main(String[] as){
-    
-    
-    
+
+    static void reverse_string(String[] str) {
+        for (int i = 0; i < str.length; i++) {
+            System.out.print(str[i] + " ");
+        }
+
+    }
+
+    public static void main(String[] as) {
+        String input_String = get_Expression();
+        String[] after_split = split_Function(input_String);
+        String[] after_reverse = reverse_sentence(after_split);
+        reverse_string(after_reverse);
     }
 }
