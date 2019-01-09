@@ -75,14 +75,14 @@ public class Sorting {
     public static void main(String[] as) {
 
         System.out.println("welcome to sorting program");
-        
+
         int[] unsorted_Array = arrayof_Value(); // get values for array from user
 
         System.out.println("do you want to use (1)bubble sort or (2)sort function"); // ask user if want to use array.sort() function or bubble sort
         Scanner get_Options = new Scanner(System.in);
-        
+
         int option_Value = get_Options.nextInt();
-        
+
         sorting_Method(option_Value, unsorted_Array); // pass arguments for processing to the sorting_Method
     }
 

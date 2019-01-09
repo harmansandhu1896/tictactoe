@@ -16,21 +16,22 @@ import javax.script.ScriptException;
  */
 public class Expression {
 
-   static String get_expression() {
+    static String get_Expression() { // method to get expression from user
 
         Scanner get_Value = new Scanner(System.in);
         System.out.println("enter expression");
+
         String input_Expression = get_Value.next();
 
         return input_Expression;
     }
 
-    public static void main(String[] args) throws ScriptException {
+    public static void main(String[] args) throws ScriptException {  // main method to start the program 
         try {
-            
+
             ScriptEngineManager mgr = new ScriptEngineManager();
             ScriptEngine engine = mgr.getEngineByName("JavaScript");
-            String value =get_expression();
+            String value = get_Expression();
             System.out.println(engine.eval(value));
 
         } catch (ScriptException ae) {
