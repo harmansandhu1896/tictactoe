@@ -68,7 +68,6 @@ public class Sorting {
             System.out.println("after sorting values in array");
             Arrays.sort(array);
             System.out.println();
-           // System.out.print(Arrays.toString(array));
         }
 
     }
