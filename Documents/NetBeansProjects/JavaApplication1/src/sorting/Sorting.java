@@ -62,10 +62,9 @@ public class Sorting {
         System.out.println("before sorting values in array");
         display_array(unsorted_Array);
         
-        int bubble_Sort(unsorted_Array);
-        System.out.println("before after sorting values in array");
-        display_array(unsorted_Array);
-        System.out.println("array values");
+        int[] sorted_Array=bubble_Sort(unsorted_Array);
+        System.out.println("after sorting values in array");
+        display_array(sorted_Array);
 
     }
 
