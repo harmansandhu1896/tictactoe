@@ -20,9 +20,11 @@ public class Sorting {
         int max_values = get_Value.nextInt();
 
         int final_Info[] = new int[max_values];
+         System.out.println("enter value");
         for (int i = 0; i < max_values; i++) {
-            System.out.println("enter start value");
+           
             final_Info[i] = get_Value.nextInt();
+            System.out.print(", ");
         }
 
         return final_Info;
