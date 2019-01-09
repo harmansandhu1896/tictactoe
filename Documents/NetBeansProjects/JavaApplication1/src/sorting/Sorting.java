@@ -5,6 +5,7 @@
  */
 package sorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -24,14 +25,14 @@ public class Sorting {
         for (int i = 0; i < max_values; i++) {
 
             array[i] = get_Value.nextInt();
-            System.out.print(", ");
+
         }
 
         return array;
 
     }
 
-   static void display_array(int[] array) {
+    static void display_array(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
@@ -53,19 +54,37 @@ public class Sorting {
 
         }
         return array;
+
+    }
+
+    static void sorting_Method(int option, int[] array) {
+        System.out.println("before sorting values in array");
+        display_array(array);
+        if (option == 1) {
+            int[] sorted_Array = bubble_Sort(array);
+            System.out.println("after sorting values in array");
+            display_array(sorted_Array);
+        } else if (option == 2) {
+            System.out.println("after sorting values in array");
+            Arrays.sort(array);
+            System.out.println();
+           // System.out.print(Arrays.toString(array));
+        }
+
     }
 
     public static void main(String[] as) {
 
         System.out.println("welcome to sorting program");
-        int[] unsorted_Array = arrayof_Value();
-        System.out.println("before sorting values in array");
-        display_array(unsorted_Array);
         
-        int[] sorted_Array=bubble_Sort(unsorted_Array);
-        System.out.println("after sorting values in array");
-        display_array(sorted_Array);
+        int[] unsorted_Array = arrayof_Value(); // get values for array from user
 
+        System.out.println("do you want to use (1)bubble sort or (2)sort function"); // ask user if want to use array.sort() function or bubble sort
+        Scanner get_Options = new Scanner(System.in);
+        
+        int option_Value = get_Options.nextInt();
+        
+        sorting_Method(option_Value, unsorted_Array); // pass arguments for processing to the sorting_Method
     }
 
 }
